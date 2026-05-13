@@ -17,6 +17,15 @@
       "paused_at": "2026-05-13T02:47:07Z",
       "completed": true,
       "completed_at": "2026-05-13T03:00:48.851Z"
+    },
+    {
+      "id": "3a435f26-2fd8-4079-a15b-74ca0234d4c5",
+      "project": "Academy / BlueYonder",
+      "title": "Wire BY SaaS URL into Playwright OA tests",
+      "notes": "Tests currently hardcoded to local (cx-lpt943). Need to support SaaS base URL via env config \u2014 auth.js already has the IS_LOCAL flag and SaaS URL logic, just needs the playwright-run.json env toggle wired up and tested against the SaaS environment.",
+      "paused_at": "2026-05-13T14:00:00Z",
+      "completed": false,
+      "completed_at": null
     }
   ]
 }
