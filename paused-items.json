@@ -15,8 +15,8 @@
       "title": "test demo run",
       "notes": "",
       "paused_at": "2026-05-13T02:47:07Z",
-      "completed": false,
-      "completed_at": null
+      "completed": true,
+      "completed_at": "2026-05-13T03:00:48.851Z"
     }
   ]
 }
