@@ -1,0 +1,13 @@
+{
+  "items": [
+    {
+      "id": "example-001",
+      "project": "Example Project",
+      "title": "Example paused item",
+      "notes": "Delete this and add your real items. You can edit this file directly on GitHub.",
+      "paused_at": "2026-05-12T00:00:00Z",
+      "completed": false,
+      "completed_at": null
+    }
+  ]
+}
