@@ -4,7 +4,7 @@
       "id": "example-001",
       "project": "Example Project",
       "title": "Example paused item",
-      "notes": "Delete this and add your real items. You can edit this file directly on GitHub.",
+      "notes": "Delete this and add your real items.",
       "paused_at": "2026-05-12T00:00:00Z",
       "completed": false,
       "completed_at": null
@@ -22,8 +22,17 @@
       "id": "3a435f26-2fd8-4079-a15b-74ca0234d4c5",
       "project": "Academy / BlueYonder",
       "title": "Wire BY SaaS URL into Playwright OA tests",
-      "notes": "Tests currently hardcoded to local (cx-lpt943). Need to support SaaS base URL via env config \u2014 auth.js already has the IS_LOCAL flag and SaaS URL logic, just needs the playwright-run.json env toggle wired up and tested against the SaaS environment.",
+      "notes": "Tests currently hardcoded to local (cx-lpt943). Need to support SaaS base URL via env config.",
       "paused_at": "2026-05-13T14:00:00Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "5c63f98d-851b-44ef-900b-95a9c58f6ac7",
+      "project": "Claude Config",
+      "title": "Set Claude default behavior to use markdown in XML instead of just .md files",
+      "notes": "",
+      "paused_at": "2026-05-14T16:28:47Z",
       "completed": false,
       "completed_at": null
     }
