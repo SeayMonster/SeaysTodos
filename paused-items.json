@@ -35,6 +35,15 @@
       "paused_at": "2026-05-14T16:28:47Z",
       "completed": false,
       "completed_at": null
+    },
+    {
+      "id": "264add44-84bf-493d-bac4-a18b9ce8c0c3",
+      "project": "Academy / BlueYonder",
+      "title": "Reorganize the repo",
+      "notes": "Move portals, skills, docs into cleaner layout",
+      "paused_at": "2026-05-15T05:54:04Z",
+      "completed": false,
+      "completed_at": null
     }
   ]
 }
