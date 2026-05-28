@@ -53,6 +53,15 @@
       "paused_at": "2026-05-28T17:07:20Z",
       "completed": false,
       "completed_at": null
+    },
+    {
+      "id": "438e922c-c6de-4d2d-a7e6-6ed288bd55a5",
+      "project": "CBI Process Change",
+      "title": "Get CKB schema for PogValidator — stores and products tables",
+      "notes": "PogValidator Phase 1 needs real table/column names. Run in SSMS against cx-lpt943\\v2022, db ckb: SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME LIKE '%store%' OR TABLE_NAME LIKE '%product%' OR TABLE_NAME LIKE '%spc%'; then sp_help on the store and product tables. Update CommonConstants.cs with results.",
+      "paused_at": "2026-05-28T21:13:50Z",
+      "completed": false,
+      "completed_at": null
     }
   ]
 }
