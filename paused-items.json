@@ -80,6 +80,15 @@
       "paused_at": "2026-05-30T07:26:27Z",
       "completed": false,
       "completed_at": null
+    },
+    {
+      "id": "33299797-a521-4432-86b9-0d9a91feda0c",
+      "project": "CBI Process Change",
+      "title": "Redesign Snowflake sync to pull from CKB by status",
+      "notes": "Import manages planogram lifecycle (banner/year/period). Snowflake sync is decoupled \u2014 periodic full mirror of CKB planograms matching SnowflakePushStatuses config (e.g. 1,2,4). Truncate + reload each cycle. No BatchGUID needed. After each sync cycle, mark all pending SnowflakeSynced import records as done. Source tables: ix_spc_planogram (filter PgStatus IN configured values) + all 8 child tables. Current broken design re-parses raw PSA via BYDataConverter giving fake DBKEYs 0/1/2 per file.",
+      "paused_at": "2026-06-04T07:52:50Z",
+      "completed": false,
+      "completed_at": null
     }
   ]
 }
