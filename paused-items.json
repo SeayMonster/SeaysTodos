@@ -1,94 +1,103 @@
 {
-    "items":  [
-                  {
-                      "id":  "example-001",
-                      "project":  "Example Project",
-                      "title":  "Example paused item",
-                      "notes":  "Delete this and add your real items.",
-                      "paused_at":  "2026-05-12T00:00:00Z",
-                      "completed":  false,
-                      "completed_at":  null
-                  },
-                  {
-                      "id":  "02c145a9-739e-4638-8c8c-4eee3313bd50",
-                      "project":  "Personal",
-                      "title":  "test demo run",
-                      "notes":  "",
-                      "paused_at":  "2026-05-13T02:47:07Z",
-                      "completed":  true,
-                      "completed_at":  "2026-05-13T03:00:48.851Z"
-                  },
-                  {
-                      "id":  "3a435f26-2fd8-4079-a15b-74ca0234d4c5",
-                      "project":  "Academy/BlueYonder",
-                      "title":  "Wire BY SaaS URL into Playwright OA tests",
-                      "notes":  "Tests currently hardcoded to local (cw-lpt943). Need to support SaaS base URL via env config.",
-                      "paused_at":  "2026-05-13T14:00:00Z",
-                      "completed":  false,
-                      "completed_at":  null
-                  },
-                  {
-                      "id":  "5c63f98d-851b-44ef-900b-95a9c58f6ac7",
-                      "project":  "Claude Config",
-                      "title":  "Set Claude default behavior to use markdown in XML instead of just .md files",
-                      "notes":  "",
-                      "paused_at":  "2026-05-14T16:28:47Z",
-                      "completed":  false,
-                      "completed_at":  null
-                  },
-                  {
-                      "id":  "264add44-84bf-493d-bac4-a18b9ce8c0c3",
-                      "project":  "Academy/BlueYonder",
-                      "title":  "Reorganize the repo",
-                      "notes":  "Move portals, skills, docs into cleaner layout",
-                      "paused_at":  "2026-05-15T05:54:04Z",
-                      "completed":  false,
-                      "completed_at":  null
-                  },
-                  {
-                      "id":  "200ef1f8-31d9-4723-981c-f1eaee1eeeab",
-                      "project":  "CBI Process Change",
-                      "title":  "AI pre-validation design for .psa import errors",
-                      "notes":  "Brainstorming AI-assisted pre-import validation. Error types identified: Duplicate UPC, Invalid Store Number (blank/null/non-numeric), Invalid UPC Format (duplicate product / null / non-numeric chars), Product not in CBI Master (WIP warning), Unable to create store assignment. Left off at clarifying question: which bucket matters more — auto-fixing deterministic errors (no AI needed) vs intelligently resolving ambiguous ones (duplicate UPC resolution, unknown product matching). AI library candidates: Microsoft.ML or LLamaSharp. Next step: get user answer, then propose 2-3 approaches.",
-                      "paused_at":  "2026-05-28T17:07:20Z",
-                      "completed":  false,
-                      "completed_at":  null
-                  },
-                  {
-                      "id":  "438e922c-c6de-4d2d-a7e6-6ed288bd55a5",
-                      "project":  "CBI Process Change",
-                      "title":  "Get CKB schema for PogValidator — stores and products tables",
-                      "notes":  "PogValidator Phase 1 needs real table/column names. Run in SSMS against cx-lpt943\\v2022, db ckb: SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME LIKE \u0027%store%\u0027 OR TABLE_NAME LIKE \u0027%product%\u0027 OR TABLE_NAME LIKE \u0027%spc%\u0027; then sp_help on the store and product tables. Update CommonConstants.cs with results.",
-                      "paused_at":  "2026-05-28T21:13:50Z",
-                      "completed":  false,
-                      "completed_at":  null
-                  },
-                  {
-                      "id":  "7ae9cd81-958b-4c8e-b8e1-da781b21430e",
-                      "project":  "CBI Process Change",
-                      "title":  "Set up Snowflake MCP connection for Space Planning Upload v2.1 schema inspection",
-                      "notes":  "Need snowflake-connector-python + a Python MCP server (not mssql_mcp_server - different engine). Goal: inspect target table schemas for Crisp Platform delivery design. CKB MCP already wired up (cx-lpt943\\v2022, db: ckb, Windows auth).",
-                      "paused_at":  "2026-05-29T16:13:51Z",
-                      "completed":  false,
-                      "completed_at":  null
-                  },
-                  {
-                      "id":  "222efe2b-63dd-43d0-bc32-9ad950470248",
-                      "project":  "CKB Planogram Import Export",
-                      "title":  "File-free export — write implementation plan",
-                      "notes":  "Design complete and spec approved. Next: invoke writing-plans skill to create implementation plan. Spec at docs/superpowers/specs/2026-05-30-file-free-export-design.md. Key design: cx_stg_export_job staging table (shared Pog/Floor), SP name constant in CommandFactory.cs, app.config for runtime settings, --job guid arg for DM flow, no-arg for PS flow. HTML READMEs written for both PogExport and FlrExport.",
-                      "paused_at":  "2026-05-30T07:26:27Z",
-                      "completed":  false,
-                      "completed_at":  null
-                  },
-                  {
-                      "id":  "33299797-a521-4432-86b9-0d9a91feda0c",
-                      "project":  "CBI Process Change",
-                      "title":  "Redesign Snowflake sync to pull from CKB by status",
-                      "notes":  "Import manages planogram lifecycle (banner/year/period). Snowflake sync is decoupled - delta sync every 60s keyed on DBKEY. Strategy: compare CKB ix_spc_planogram (PgStatus IN configured values) vs Snowflake IX_SPC_PLANOGRAM - INSERT planograms (+ child rows) in CKB not in Snowflake, DELETE planograms (+ orphaned child rows) in Snowflake not in CKB. No truncate+reload. No BatchGUID. Child tables cascade off planogram DBKEY. After each sync cycle completes, mark all pending SnowflakeSynced import records as done. Current broken design re-parses raw PSA via BYDataConverter giving fake DBKEYs 0/1/2 per file.",
-                      "paused_at":  "2026-06-04T07:52:50Z",
-                      "completed":  false,
-                      "completed_at":  null
-                  }
-              ]
+  "items": [
+    {
+      "id": "example-001",
+      "project": "Example Project",
+      "title": "Example paused item",
+      "notes": "Delete this and add your real items.",
+      "paused_at": "2026-05-12T00:00:00Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "02c145a9-739e-4638-8c8c-4eee3313bd50",
+      "project": "Personal",
+      "title": "test demo run",
+      "notes": "",
+      "paused_at": "2026-05-13T02:47:07Z",
+      "completed": true,
+      "completed_at": "2026-05-13T03:00:48.851Z"
+    },
+    {
+      "id": "3a435f26-2fd8-4079-a15b-74ca0234d4c5",
+      "project": "Academy/BlueYonder",
+      "title": "Wire BY SaaS URL into Playwright OA tests",
+      "notes": "Tests currently hardcoded to local (cw-lpt943). Need to support SaaS base URL via env config.",
+      "paused_at": "2026-05-13T14:00:00Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "5c63f98d-851b-44ef-900b-95a9c58f6ac7",
+      "project": "Claude Config",
+      "title": "Set Claude default behavior to use markdown in XML instead of just .md files",
+      "notes": "",
+      "paused_at": "2026-05-14T16:28:47Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "264add44-84bf-493d-bac4-a18b9ce8c0c3",
+      "project": "Academy/BlueYonder",
+      "title": "Reorganize the repo",
+      "notes": "Move portals, skills, docs into cleaner layout",
+      "paused_at": "2026-05-15T05:54:04Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "200ef1f8-31d9-4723-981c-f1eaee1eeeab",
+      "project": "CBI Process Change",
+      "title": "AI pre-validation design for .psa import errors",
+      "notes": "Brainstorming AI-assisted pre-import validation. Error types identified: Duplicate UPC, Invalid Store Number (blank/null/non-numeric), Invalid UPC Format (duplicate product / null / non-numeric chars), Product not in CBI Master (WIP warning), Unable to create store assignment. Left off at clarifying question: which bucket matters more \u2014 auto-fixing deterministic errors (no AI needed) vs intelligently resolving ambiguous ones (duplicate UPC resolution, unknown product matching). AI library candidates: Microsoft.ML or LLamaSharp. Next step: get user answer, then propose 2-3 approaches.",
+      "paused_at": "2026-05-28T17:07:20Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "438e922c-c6de-4d2d-a7e6-6ed288bd55a5",
+      "project": "CBI Process Change",
+      "title": "Get CKB schema for PogValidator \u2014 stores and products tables",
+      "notes": "PogValidator Phase 1 needs real table/column names. Run in SSMS against cx-lpt943\\v2022, db ckb: SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME LIKE '%store%' OR TABLE_NAME LIKE '%product%' OR TABLE_NAME LIKE '%spc%'; then sp_help on the store and product tables. Update CommonConstants.cs with results.",
+      "paused_at": "2026-05-28T21:13:50Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "7ae9cd81-958b-4c8e-b8e1-da781b21430e",
+      "project": "CBI Process Change",
+      "title": "Set up Snowflake MCP connection for Space Planning Upload v2.1 schema inspection",
+      "notes": "Need snowflake-connector-python + a Python MCP server (not mssql_mcp_server - different engine). Goal: inspect target table schemas for Crisp Platform delivery design. CKB MCP already wired up (cx-lpt943\\v2022, db: ckb, Windows auth).",
+      "paused_at": "2026-05-29T16:13:51Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "222efe2b-63dd-43d0-bc32-9ad950470248",
+      "project": "CKB Planogram Import Export",
+      "title": "File-free export \u2014 write implementation plan",
+      "notes": "Design complete and spec approved. Next: invoke writing-plans skill to create implementation plan. Spec at docs/superpowers/specs/2026-05-30-file-free-export-design.md. Key design: cx_stg_export_job staging table (shared Pog/Floor), SP name constant in CommandFactory.cs, app.config for runtime settings, --job guid arg for DM flow, no-arg for PS flow. HTML READMEs written for both PogExport and FlrExport.",
+      "paused_at": "2026-05-30T07:26:27Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "33299797-a521-4432-86b9-0d9a91feda0c",
+      "project": "CBI Process Change",
+      "title": "Redesign Snowflake sync to pull from CKB by status",
+      "notes": "Import manages planogram lifecycle (banner/year/period). Snowflake sync is decoupled - delta sync every 60s keyed on DBKEY. Strategy: compare CKB ix_spc_planogram (PgStatus IN configured values) vs Snowflake IX_SPC_PLANOGRAM - INSERT planograms (+ child rows) in CKB not in Snowflake, DELETE planograms (+ orphaned child rows) in Snowflake not in CKB. No truncate+reload. No BatchGUID. Child tables cascade off planogram DBKEY. After each sync cycle completes, mark all pending SnowflakeSynced import records as done. Current broken design re-parses raw PSA via BYDataConverter giving fake DBKEYs 0/1/2 per file.",
+      "paused_at": "2026-06-04T07:52:50Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "31256df4-b851-4be3-ac70-5b3947c26598",
+      "project": "Academy/BlueYonder",
+      "title": "POG CopyVersion ASCX not deploying via CopyWebUI.bat",
+      "notes": "CopyWebUI.bat lists the ASCX files but they are not copied. DLL deploys fine (v1.1 confirms). ASCX missing means lblSelectionInfo is null at runtime, pill silently fails. Need to fix the bat file XCOPY command for ASCX files. Also pausing: make copy/version processing faster (N round trips -> 1 bulk proc).",
+      "paused_at": "2026-06-24T20:00:00Z",
+      "completed": false,
+      "completed_at": null
+    }
+  ]
 }
