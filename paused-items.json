@@ -98,6 +98,87 @@
       "paused_at": "2026-06-24T20:00:00Z",
       "completed": false,
       "completed_at": null
+    },
+    {
+      "id": "21f10414-a693-49bc-898f-f6d14f79105a",
+      "project": "C&S MDM",
+      "title": "Phase 0: Governance (W0-W12)",
+      "notes": "Light ongoing. Name owners, weekly status, RAID escalations. Gate: cadence + decision owners confirmed. Plan: technical-team-plan.md + business-team-plan.md | Reminder: daily digest from Jul 14 2026 (vacation Jul 5-11 skip).",
+      "paused_at": "2026-06-30T16:15:29Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "b6cf60a9-3c81-43da-89fc-4d3ff7439cc2",
+      "project": "C&S MDM",
+      "title": "Phase 1: BigQuery Data Readiness (W1) \u2605",
+      "notes": "TECH CRITICAL. Access checklist, IAM/service account, source inventory, output schema, data dictionary. Meeting: Technical/BQ Readiness 90min. Gate: timeline starts here. Plan: docs/technical-team-plan.md | Reminder: daily digest from Jul 14 2026 (vacation Jul 5-11 skip).",
+      "paused_at": "2026-06-30T16:15:29Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "36135fe6-514a-436c-9034-c90016f4f108",
+      "project": "C&S MDM",
+      "title": "Phase 2: Current State Discovery (W1-W2)",
+      "notes": "BUSINESS HEAVY. Requirements, hierarchies, pain points, data dictionary, SME workshops. IT supports with source facts. Gate: scope approved. Plan: docs/business-team-plan.md | Reminder: daily digest from Jul 14 2026 (vacation Jul 5-11 skip).",
+      "paused_at": "2026-06-30T16:15:29Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "be17c55e-8c03-45b7-afd3-e271ffb3ec87",
+      "project": "C&S MDM",
+      "title": "Phase 3: POV Sample + Profiling (W2-W4)",
+      "notes": "Approve 30K sample. IT: provide extract + reconcile counts. Business: good/bad examples, mandatory fields, defect scorecard review. Gate: sample representative. | Reminder: daily digest from Jul 14 2026 (vacation Jul 5-11 skip).",
+      "paused_at": "2026-06-30T16:15:29Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "406f1334-0019-4705-93e9-2c735df30efe",
+      "project": "C&S MDM",
+      "title": "Phase 4: AI MDM Setup + Rules (W3-W5)",
+      "notes": "BUSINESS HEAVY. Approve cleansing rules, hierarchy mapping, confidence thresholds, validation plan. IT: confirm field mappings. Gate: rules approved for POV. | Reminder: daily digest from Jul 14 2026 (vacation Jul 5-11 skip).",
+      "paused_at": "2026-06-30T16:15:29Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "2e8de297-447d-41c8-b8ee-a7e4ea37a109",
+      "project": "C&S MDM",
+      "title": "Phase 5: POV Execution + Gate (W5-W7)",
+      "notes": "Run 30K POV. IT: keep source stable. Business: review output/exceptions, QA sample. GATE W7: go/no-go for 300K expansion. | Reminder: daily digest from Jul 14 2026 (vacation Jul 5-11 skip).",
+      "paused_at": "2026-06-30T16:15:29Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "df9aa018-2d68-424f-98c9-a1cd3872b1be",
+      "project": "C&S MDM",
+      "title": "Phase 6: Full Processing (W8-W11)",
+      "notes": "TECH + BUSINESS. IT: full 300K dataset + cutoff W8. Business: one consolidated review cycle. Gate: corrections applied. | Reminder: daily digest from Jul 14 2026 (vacation Jul 5-11 skip).",
+      "paused_at": "2026-06-30T16:15:29Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "39b3c29e-8a43-4b82-8eea-2ea6c024bb15",
+      "project": "C&S MDM",
+      "title": "Phase 7: Validation + Handoff (W10-W12)",
+      "notes": "Final QA, sign-off, support model, backlog. IT: output consumption path. Business: sponsor go-live approval. | Reminder: daily digest from Jul 14 2026 (vacation Jul 5-11 skip).",
+      "paused_at": "2026-06-30T16:15:29Z",
+      "completed": false,
+      "completed_at": null
+    },
+    {
+      "id": "9271aa96-5b1f-46ea-b516-a83f12b15b71",
+      "project": "C&S MDM",
+      "title": "Weekly: open current phase + mark prior complete",
+      "notes": "Each Monday: 1) Complete finished phase in pause tracker 2) Open docs/technical-team-plan.md for current week 3) Check RAID/blockers before Crisp weekly status. Vacation Jul 5-11 2026 \u2014 no project work.",
+      "paused_at": "2026-06-30T16:15:29Z",
+      "completed": false,
+      "completed_at": null
     }
   ]
 }
