@@ -179,6 +179,15 @@
       "paused_at": "2026-06-30T16:15:29Z",
       "completed": false,
       "completed_at": null
+    },
+    {
+      "id": "c860f34e-b509-4165-9037-78cf78f749af",
+      "project": "Hershey Reporting Dashboard",
+      "title": "Phase: rehandle OMD uploads",
+      "notes": "OMD import still resolves account via ix_sys_account.Name (OmdCore/AccountResolver.cs, ReportingDashboard/Services/OmdImportService.cs, OmdImporter/Program.cs), but the dashboard account dimension is now planogram Desc50 (no ix_sys_account join anywhere in the WPF app). Misaligned: OMD-driven UI labels key off ix_sys_account accounts that will not match Desc50 values. Need a phase to rework OMD upload handling so field-mappings resolve/attach against the Desc50 account (or the correct OMD field), and decide how OMD labels feed the dashboard dims (Category/BU still messy on Desc2/Desc4; reset date now Desc9). Dormant today - does not touch the deployed dashboard.",
+      "paused_at": "2026-07-20T22:11:10Z",
+      "completed": false,
+      "completed_at": null
     }
   ]
 }
